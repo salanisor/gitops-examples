@@ -6,6 +6,8 @@ metadata:
     app: bgd
   name: bgd
   namespace: bgd
+  annotations:
+    openshift.io/host.generated: 'true'
 spec:
   host: ""
   port:
@@ -14,8 +16,3 @@ spec:
     kind: Service
     name: bgd
     weight: 100
-status:
-  ingress:
-  - conditions:
-    - status: "True"
-      type: Admitted
